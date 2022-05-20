@@ -1,0 +1,32 @@
+nav.navbar {
+  border-bottom: 1px solid #353941;
+}
+
+.navbar-brand, 
+.nav-item .nav-link,
+.nav-item .nav-link.active{
+  color: #FFFFFF;
+}
+
+.navbar-brand:hover, 
+.nav-item .nav-link:hover,
+.nav-item .nav-link.active:hover{
+  color: #90B8F8;
+}
+
+body{
+  background-color: #26282B;
+}
+
+.container{
+  margin-top: 20px;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.container h1,
+.container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
