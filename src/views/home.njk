@@ -13,10 +13,10 @@
 
 </head>
 <body>
-
+  {% block headerMenu %}
   <nav class="navbar navbar-expand-sm">
-    <div class="container-fluid">
-      <a href="#" class="navbar-brand">Início, de algo!</a>
+    <div class="container-fluid ">
+      <a href="#" class="navbar-brand">Início!</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,18 +26,27 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">Sobre</a>
+            <a class="nav-link" href="/about">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">Contato</a>
+            <a class="nav-link" href="/contato">Contato</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  {% endblock %}
 
+<main class="container">
+  {% block content %} {% endblock %}
+</main>
+
+
+<footer class="footer ">
+  <span>2022 Otávio Cleyderman</span>
+</footer>  
   
-  {% include "contentPage.html" %}
+
   
   <!-- <script src="nunjucks.js"></script> -->
 

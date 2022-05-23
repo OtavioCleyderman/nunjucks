@@ -2,6 +2,10 @@ nav.navbar {
   border-bottom: 1px solid #353941;
 }
 
+
+
+
+
 .navbar-brand, 
 .nav-item .nav-link,
 .nav-item .nav-link.active{
@@ -26,6 +30,21 @@ body{
 
 .container h1,
 .container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer{
+  border-top: 1px solid #353941;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+footer span {
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
