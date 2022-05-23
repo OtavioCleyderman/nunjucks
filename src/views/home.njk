@@ -9,14 +9,14 @@
 
   <link rel="stylesheet"  href="css/style.css">
   
-  <title>Praticando com Nunjucks</title>
+  <title>New Gallery</title>
 
 </head>
 <body>
   {% block headerMenu %}
   <nav class="navbar navbar-expand-sm">
     <div class="container-fluid ">
-      <a href="#" class="navbar-brand">Início!</a>
+      <a href="#" class="navbar-brand">New Gallery</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,8 +37,21 @@
   </nav>
   {% endblock %}
 
-<main class="container">
+<main class="container row">
   {% block content %} {% endblock %}
+
+    {% for feature in features %}
+      <div class="col-12 col-md-4 card-container">
+          <div  class="card"  style="background-image: url({{feature.source}});">
+            {# <img src={{feature.source}} class="card-img-top" alt="..."> #}
+            <div class="card-body">
+              <h5 class="card-title">{{ feature.title }}</h5>
+              <button type="button" class="btn btn-card">Saiba Mais</button>
+            </div>
+        </div>
+      </div> 
+    {% endfor %}
+
 </main>
 
 
